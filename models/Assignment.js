@@ -2,17 +2,18 @@
 // One row per (projectId, respondentId) = all 6 questions’ 4 image keys each
 const mongoose = require('mongoose');
 
-const QSchema = new mongoose.Schema({
-  qid: { type: Number, required: true },          // 1..6
-  images: [{ type: String, required: true }],     // S3 keys or URLs, length 4
-}, { _id: false });
-
 const AssignmentSchema = new mongoose.Schema({
-  projectId: { type: mongoose.Schema.Types.ObjectId, ref: 'Project', required: true },
-  respondentId: { type: Number, required: true }, // 1..100
-  questions: { type: [QSchema], required: true }, // six entries
+  RespondentID: { type: Number, required: true },
+  TaskID: { type: Number, required: true },
+  Item_1: { type: String, required: true },
+  Item_2: { type: String, required: true },
+  Item_3: { type: String, required: true },
+  Item_4: { type: String, required: true },
+  type: { type: String, required: true }
 }, { timestamps: true });
 
-AssignmentSchema.index({ projectId: 1, respondentId: 1 }, { unique: true });
+// Optional: prevent duplicates for same RespondentID & TaskID
+// AssignmentSchema.index({ RespondentID: 1, TaskID: 1 }, { unique: true });
 
 module.exports = mongoose.model('Assignment', AssignmentSchema);
+
