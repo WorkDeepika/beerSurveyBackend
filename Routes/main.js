@@ -5,6 +5,7 @@ const {putData, addUser, }= require("../controllers/addDataController")
 const {exportDataToXLSX }=  require("../controllers/getCsvController")
 const multer = require('multer');
 const path = require('path');
+const { getRegisterNumber } = require('../controllers/getRegisterNumber');
 
 // Configure multer storage
 const storage = multer.memoryStorage(); // Store files in memory
@@ -13,11 +14,12 @@ const upload = multer({ storage });
 const router = express.Router();
 
 router.get('/', welcome)
-router.post('/add-data',putData);
-router.post('/login', loginController);
-router.post('/add-user',addUser);
+// router.post('/add-data',putData);
+router.post('/register/:panelId',getRegisterNumber);
+// router.post('/login', loginController);
+// router.post('/add-user',addUser);
 // router.post('/get-xlsx',filterData);
 // router.post('/addOrUpdateProject',createOrUpdateProject);
-router.get('/download-xlsx',exportDataToXLSX)
+// router.get('/download-xlsx',exportDataToXLSX)
 
 module.exports = router;
