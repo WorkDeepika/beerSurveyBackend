@@ -66,7 +66,8 @@ const TYPE_FOLDER_MAP = {
       return res.json({
         success: true,
         error: null,
-        data: urls
+        data: urls, 
+        names : items
       });
   
     } catch (err) {
