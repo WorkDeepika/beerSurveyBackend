@@ -1,10 +1,6 @@
 const express = require('express');
 const {welcome}=require("../controllers/wecomeController")
-const { loginController,  }= require("../controllers/loginController")
-const {putData, addUser, }= require("../controllers/addDataController")
-const {exportDataToXLSX }=  require("../controllers/getCsvController")
 const multer = require('multer');
-const path = require('path');
 const { getRegisterNumber } = require('../controllers/getRegisterNumber');
 const { getImagesForRespondent } = require('../controllers/getImage');
 
@@ -15,13 +11,6 @@ const upload = multer({ storage });
 const router = express.Router();
 
 router.get('/', welcome)
-// router.post('/add-data',putData);
 router.post('/register/:panelId',getRegisterNumber);
 router.post('/getImages',getImagesForRespondent);
-// router.post('/login', loginController);
-// router.post('/add-user',addUser);
-// router.post('/get-xlsx',filterData);
-// router.post('/addOrUpdateProject',createOrUpdateProject);
-// router.get('/download-xlsx',exportDataToXLSX)
-
 module.exports = router;
