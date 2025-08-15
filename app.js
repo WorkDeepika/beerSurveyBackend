@@ -1,11 +1,8 @@
 const express = require('express'); 
 const connectDB = require('./services/db/mongo');
 const cors = require('cors');
-// const { createObjectCsvWriter } = require('csv-writer');
 const path = require('path');
-// const fs = require('fs');
 const dotenv = require('dotenv');
-connectDB();
 const routes= require('./Routes/main')
 const app = express(); 
 app.use(express.json()); 
@@ -16,7 +13,12 @@ app.use(cors({
 }));
 
 dotenv.config();
-
+(async () => {
+    await connectDB();
+    app.listen(3000, () => {
+      console.log(`Server running on port 3000`);
+    });
+  })();
 app.get('/', (req, res)=>{
     res.send("Welcome from backend")
 })
