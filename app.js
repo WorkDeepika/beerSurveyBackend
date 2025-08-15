@@ -5,6 +5,7 @@ const cors = require('cors');
 const path = require('path');
 // const fs = require('fs');
 const dotenv = require('dotenv');
+connectDB();
 const routes= require('./Routes/main')
 const app = express(); 
 app.use(express.json()); 
@@ -15,7 +16,7 @@ app.use(cors({
 }));
 
 dotenv.config();
-connectDB();
+
 app.get('/', (req, res)=>{
     res.send("Welcome from backend")
 })
