@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 
-const mongoose = require('mongoose');
 
 const dataSchema = new mongoose.Schema({
   // --- Respondent & Interviewer Info ---
