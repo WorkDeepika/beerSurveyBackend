@@ -181,6 +181,9 @@ const dataSchema = new mongoose.Schema({
   QMQ8__13: [{ type: String }],
   QMQ8__14: [{ type: String }],
   QMQ8__15: [{ type: String }],
+  QM1b: [{ type: String }],
+  QMQ8_16: [{ type: String }],
+  QMQ8_17: [{ type: String }],
   // --- Ranking & Promo ---
   rank1: { type: String, default: null },
   rank2: { type: String, default: null },
