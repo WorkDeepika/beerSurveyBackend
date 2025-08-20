@@ -28,7 +28,7 @@ const PanelCount = require('../models/panelCountModel');
 const getRegisterNumber = async (req, res) => {
   try {
     const panelId = parseInt(req.params.panelId, 10);
-    const { isTest } = req.query; // or req.body, depending on how you send it
+    const { isTest } = req.body;  // or req.body, depending on how you send it
 
     if (panelId < 1 || panelId > 6) {
       return res.status(400).json({ error: "Invalid panel ID" });
