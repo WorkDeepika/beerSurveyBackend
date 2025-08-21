@@ -40,7 +40,7 @@ const getRegisterNumber = async (req, res) => {
       if (!panel) {
         return res.status(404).json({ error: "Panel not found" });
       }
-      return res.json({ registrationNumber: panel.count });
+      return res.json({ registrationNumber: panel.count +1 });
     }
 
     // Normal flow: atomic increment but only if count < 100

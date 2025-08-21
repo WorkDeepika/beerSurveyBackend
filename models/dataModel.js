@@ -196,6 +196,7 @@ const dataSchema = new mongoose.Schema({
   promo4: { type: String, default: null },
   promo5: { type: String, default: null },
   promo6: { type: String, default: null },
+  isTest: { type: String, default: null },
 }, { timestamps: true });
 
 const DataModel = mongoose.model("DataModel", dataSchema);

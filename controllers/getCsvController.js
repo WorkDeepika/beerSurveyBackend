@@ -18,6 +18,7 @@ const exportDataToXLSX = async (req, res) => {
         // Define the expected fields
         const expectedFields = [
             "_id",
+            "isTest",
             "email",
             "name",
             "address",
