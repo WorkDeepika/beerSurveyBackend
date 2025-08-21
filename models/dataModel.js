@@ -196,6 +196,16 @@ const dataSchema = new mongoose.Schema({
   promo4: { type: String, default: null },
   promo5: { type: String, default: null },
   promo6: { type: String, default: null },
+  QRQ8_rec: { type: String, default: null },
+  QRQ11_rec: { type: String, default: null },
+  QRQ14_rec: { type: String, default: null },
+  P1_rec: { type: String, default: null },
+  P2_rec: { type: String, default: null },
+  P3_rec: { type: String, default: null },
+  P4_rec: { type: String, default: null },
+  P5_rec: { type: String, default: null },
+  P6_rec: { type: String, default: null },
+  QMQ9_rec: { type: String, default: null },
   isTest: { type: String, default: null },
 }, { timestamps: true });
 
