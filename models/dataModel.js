@@ -12,7 +12,7 @@ const dataSchema = new mongoose.Schema({
   areaName: { type: String, default: null },
   areaCode: { type: String, default: null },
   language: { type: String, default: null },
-  respondentId: { type: String, default: null },
+  respondentId: { type: Number, default: null },
   // --- Timestamps & Geolocation ---
   startDate: { type: String, default: null },
   startTime: { type: String, default: null },
