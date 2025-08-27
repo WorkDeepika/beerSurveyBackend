@@ -450,4 +450,4 @@ const dashboredExtra = async (req, res) => {
   }
 };
 
-module.exports = { getDataTable , dashboredExtra};
+module.exports = {   dashboredExtra};
