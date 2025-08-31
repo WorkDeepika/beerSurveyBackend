@@ -43,12 +43,12 @@ const getRegisterNumber = async (req, res) => {
 
     // Panel-specific limits
     const panelLimits = {
-      1: 138,
-      2: 129,
-      3: 119,
-      4: 121,
-      5: 118,
-      6: 107,
+      1: 148,
+      2: 136,
+      3: 125,
+      4: 128,
+      5: 123,
+      6: 108,
     };
 
     if (!panelLimits.hasOwnProperty(panelId)) {
