@@ -8,9 +8,9 @@ const getRegisterNumber = async (req, res) => {
     // Panel-specific limits
     const panelLimits = {
       1: 148,
-      2: 140,
-      3: 129,
-      4: 131,
+      2: 141,
+      3: 132,
+      4: 133,
       5: 123,
       6: 108,
     };
