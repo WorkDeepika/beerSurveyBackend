@@ -208,8 +208,8 @@ const exportDataToXLSX = async (req, res) => {
             "QMQ8__14",
             "QMQ8__15",
             "QM1b",
-            "QMQ8_16",
-            "QMQ8_17",
+            "QMQ8__16",
+            "QMQ8__17",
           
             // Ranking & Promo
             "rank1",
